@@ -7,7 +7,10 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Супер редактор 3000</title>
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/fonts.css">
 	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/drag.css">
 </head>
 
 <body>
@@ -15,15 +18,33 @@
 		<ul>
 			<li><a href="#">Включить режим разметки</a></li>
 		</ul>
+
+		<div class="navigation__items">
+			<input type="text" class="interval textfield" value="Text field">
+				<div class="secondary_buttons">
+					<button class="update_categories green" draggable="true">Кнопка 2</button>
+					<button class="reset red" draggable="true">Кнопка 3</button>
+				</div>
+				<button class="start green" draggable="true">Кнопка 1</button>
+		</div>
+		<div class="navigation__export">
+			<button class="export_to_png button" draggable="true">Экспорт в PNG</button>
+			<button class="export_to_html button" draggable="true">Экспорт в HTML</button>
+			<button class="export_to_rt button" draggable="true">Экспорт в формат RT</button>
+		</div>
+		
 	</div>
 	<section>
 		<div class="container">
 			<div id="main"></div>
-			<a href="#">Добавить секцию</a>
+			<a href="#" class="add_row">Добавить секцию</a>
 		</div>
 	</section>
 
+	<script src="js/dom-to-image.min.js"></script>
+	<script src="js/download.js"></script>
 	<script src="js/main.js"></script>
+	<script src="js/dragndrop.js"></script>
 </body>
 
 </html>

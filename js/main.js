@@ -1,3 +1,4 @@
+let addRowButton = document.querySelector(".add_row");
 function addRow() {
   var row = document.createElement("row");
   row.className = "row empty_element";
@@ -118,5 +119,8 @@ function choiceOfLayout() {
   }
   return ul;
 }
+
+
+addRowButton.addEventListener("click", addRow);
 
 addRow();

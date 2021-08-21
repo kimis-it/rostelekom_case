@@ -1,0 +1,109 @@
+.button {
+    -webkit-appearance: none;
+    border-width: 0px;
+    cursor: pointer;
+    color:rgb(119, 119, 119);
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: #3330 1px 1px 5px;
+    box-sizing: border-box;
+    text-shadow: rgb(184, 184, 184) 0px 0px 1px;
+    display: block;
+    margin-bottom: 4px;
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+.save_settings {
+    background: linear-gradient(#76c360, #35b533);
+    /* align-self: flex-start; */
+    padding: 10px;
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+.export_to_html, .export_to_rt {
+
+}
+
+
+.start {   
+    padding: 12px 0;
+    font-size: 20px;
+}
+
+.green {
+     background: linear-gradient(#76c360, #35b533);
+}
+
+.green:hover {
+     background: linear-gradient(#76c360, #35b932);
+}
+
+.red {
+    background: linear-gradient(#d40b0b, #d40000);
+}
+
+.red:hover {
+    background: linear-gradient(#d40b0b, #e80000);
+}
+
+.update_categories {
+    background: linear-gradient(#76c360, #35b533);
+    padding: 10px;
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+.reset {
+    padding: 10px 30px;
+    font-size: 16px;
+}
+
+.textfield {
+    padding: 10px;
+    color: #666; 
+    font-size: 20px; 
+    border-radius: 7px; 
+    border: 1px solid #b1b1b1;   
+    margin-top: 0px;
+    background-color: #f9f9f9;
+}
+
+textarea.textfield {
+    height: 90px;
+    font-size: 14px;
+}
+
+
+
+.center_column {
+    flex: 4 1 300px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    margin:30px 15px 30px 30px;
+    padding:20px;
+    /* width: 60%;*/
+    /* overflow-y: scroll; */
+    display: grid;
+    grid-template-columns: minmax(150px, 200px) minmax(150px, 200px) minmax(150px, 200px) minmax(150px, 200px) minmax(150px, 200px) minmax(150px, 200px);
+    grid-column-gap: 12px;
+    grid-row-gap: 12px;
+}
+
+.col {
+    
+}
+
+.cell {
+    border: 1px dotted rgb(56, 56, 56);
+    content: "&nbsp;";
+    /* width: 30px; */
+    padding: 25px 36px 25px 36px;
+}
+
+.noborder {
+    border: 0px dotted #fff !important;
+}
