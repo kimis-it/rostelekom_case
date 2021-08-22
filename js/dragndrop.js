@@ -1,11 +1,14 @@
-window.onload = () => {
-    let exportToPngButton = document.querySelector(".export_to_png"),
+
+    const exportToPngButton = document.querySelector(".export_to_png"),
         exportToHtmlButton = document.querySelector(".export_to_html"),
         exportToRtButton = document.querySelector(".export_to_rt"),
 
         sidebar = document.querySelector(".secondary_buttons"),
 
         mainScreen = document.querySelector("#main"),
+        mainContainer = document.querySelector("section")
+        canvas = document.querySelector(".canvas"),
+        renderedCanvasContainer = document.querySelector(".rendered_canvas_container"),
         cellClass = "newItem"; 
 
     let isCurrentElementFromSidebar = false
@@ -71,7 +74,7 @@ window.onload = () => {
 
     mainScreen.addEventListener("drop", (e) => { // Обработчик события по окончанию перетаскивания, вешается на места приземления
         console.log(e.target.className);
-        if(e.target.className == cellClass) { // Если элемент приземляется только в разрешенные ячейки
+        if(e.target.classList[0] == cellClass) { // Если элемент приземляется только в разрешенные ячейки
             pasteElementFromDataTransfer(e);
         }
     });
@@ -86,7 +89,10 @@ window.onload = () => {
         e.preventDefault();
 
         let rows = document.querySelectorAll("row"),
-            items = document.querySelectorAll(".newItem");
+            items = document.querySelectorAll(".newItem"),
+            rowSettings = document.querySelectorAll(".row-settings"),
+            templates = document.querySelectorAll(".templates");
+            dataURL = canvas.toDataURL();
         
         Array.from(rows).map((item) => {    // Перед фотографированием скрываем рамки у рядов
             item.classList.add("noborder");
@@ -96,7 +102,18 @@ window.onload = () => {
             item.classList.add("noborder");
         });
 
-        domtoimage.toBlob(mainScreen)
+        Array.from(rowSettings).map((item) => {
+            item.classList.add("dn");
+        });
+
+        Array.from(templates).map((item) => {
+            item.classList.add("dn");
+        });
+
+        addRowButton.classList.add("dn");
+        
+
+        domtoimage.toBlob(mainContainer)
             .then(function (blob) {
                 download(blob, "rt_view.png", "image/png");
 
@@ -107,6 +124,16 @@ window.onload = () => {
                 Array.from(items).map((item) => { // Возвращаем рамки на место
                     item.classList.remove("noborder");
                 });
+
+                Array.from(rowSettings).map((item) => {
+                    item.classList.remove("dn");
+                });
+
+                Array.from(templates).map((item) => {
+                    item.classList.remove("dn");
+                });
+
+                addRowButton.classList.remove("dn");
             })
             .catch(function (error) {
                 console.error('Ошибка сохранения изображения: ', error);
@@ -116,12 +143,11 @@ window.onload = () => {
     });
 
     exportToHtmlButton.addEventListener("click", (e) => { // Экспорт в HTML
-        let data = mainScreen.innerHTML;
+        let data = mainContainer.innerHTML;
         download(data, "rt_view.html", "text/plain");
     });
 
     exportToRtButton.addEventListener("click", (e) => { // Экспорт во внутренний формат Russian Nano JSON
-        let data = Array.prototype.slice.call(mainScreen.childNodes);
+        let data = Array.prototype.slice.call(mainContainer.childNodes);
         download(data, "rt_view.json", "text/plain");
     });
-}
