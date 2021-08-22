@@ -5,7 +5,8 @@ window.onload = () => {
 
         sidebar = document.querySelector(".secondary_buttons"),
 
-        mainScreen = document.querySelector("#main");
+        mainScreen = document.querySelector("#main"),
+        cellClass = "newItem"; 
 
     let isCurrentElementFromSidebar = false
         currentElementId = 0;
@@ -22,6 +23,16 @@ window.onload = () => {
         }
     }
 
+    let makeElementEditable = (e) => { // Функция для редактирования элемента
+        e.target.setAttribute("contenteditable","true");
+    }
+
+    let endEditingElement = (e) => {
+        if(e.keyCode === 13) {
+            e.target.setAttribute("contenteditable","false");
+        }
+    }
+
     let pasteElementFromDataTransfer = (e) => {
         const data = e.dataTransfer.getData("text/plain");
 
@@ -29,20 +40,27 @@ window.onload = () => {
             let currentElement = document.getElementsByClassName(data)[0];
             let newElement = currentElement.cloneNode(true);    // Копируем элемент
             newElement.classList.add("custom-" + currentElementId); // Присваеваем ему уникальный класс
-            newElement.addEventListener("dragstart", (e) => {       // Вешаем на него событие
+
+            newElement.addEventListener("dragstart", (e) => {       // Вешаем на него событие по нача
                 copyElementToDataTransfer(e);
             });
+
+            newElement.addEventListener("dblclick", (e) => {
+                makeElementEditable(e);
+            });
+
+            newElement.addEventListener("keydown", (e) => {
+                endEditingElement(e);
+            });
+
             isCurrentElementFromSidebar = false;
             e.target.appendChild(newElement);
             currentElementId++;
         } else {
-            console.log(data);
-            console.log(document.getElementsByClassName(data)[0]);
             e.target.appendChild(document.getElementsByClassName(data)[0]);
         }
     }
 
-    console.log(sidebar.children);
 
     Array.from(sidebar.children).map((item) => { 
         item.setAttribute("draggable", "true");
@@ -52,7 +70,10 @@ window.onload = () => {
     });
 
     mainScreen.addEventListener("drop", (e) => { // Обработчик события по окончанию перетаскивания, вешается на места приземления
-        pasteElementFromDataTransfer(e);
+        console.log(e.target.className);
+        if(e.target.className == cellClass) { // Если элемент приземляется только в разрешенные ячейки
+            pasteElementFromDataTransfer(e);
+        }
     });
    
 

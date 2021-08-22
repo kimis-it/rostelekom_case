@@ -4,6 +4,36 @@ $color_grey_2: #e9e9e9
 $color_black_1: #555
 $color_violet-blue: #7700FF
 
+*
+	box-sizing: border-box
+
+body
+	overflow-x: hidden
+
+.section-main
+	width: 80%
+	margin: 0 auto
+
+.navigation
+	min-height: 100vh
+	border-right: 1px solid #eee
+	box-shadow: rgba(117, 117, 117, 0.363) 2px 2px 2px
+	background: $color_white_1
+	&__heading
+		background-color: #e6e6e6
+		padding: 15px 15px
+		width: 100%
+		text-align: center
+	&__export
+		background-color: #e6e6e6
+		padding: 15px 15px
+		width: 100%
+		button
+			&:hover
+				background: $color_white_1
+	&__items
+		overflow-y: scroll
+		height: 100%
 .empty
 	&_element
 		justify-content: center
@@ -25,6 +55,7 @@ $color_violet-blue: #7700FF
 		height: 32px
 		cursor: pointer
 		fill: $color_grey_1
+		margin: 10px
 		&:hover
 			fill: $color_violet-blue
 
@@ -43,3 +74,24 @@ $color_violet-blue: #7700FF
 		background: $color_grey_2
 		color: $color_black_1
 		
+.row
+	position: relative
+	&-settings
+		position: absolute
+		right: -2px
+		top: -2px
+		width: 40px
+		background: $color_grey_2
+		border: 2px solid $color_grey_1
+		ul
+			display: flex
+			justify-content: center
+			align-items: center
+			flex-direction: column
+			li
+				width: 100%
+				padding: 5px
+				text-align: center
+				cursor: pointer
+				&:hover
+					background: $color_grey_1

@@ -11,70 +11,90 @@
 	<link rel="stylesheet" href="css/fonts.css">
 	<link rel="stylesheet" href="css/main.css">
 	<link rel="stylesheet" href="css/drag.css">
+	<link rel="stylesheet" href="css/interface.css">
 </head>
 
 <body>
-	<div class="navigation">
-		<ul>
-			<li><a href="#">Включить режим разметки</a></li>
-		</ul>
+	<div class="row">
+		<div class="col-12 col-md-3 col-lg-2">
+			<div class="navigation">
+				<!-- <ul>
+				<li><a href="#">Включить режим разметки</a></li>
+			</ul> -->
 
-		<div class="navigation__buttons">
-			<button type="button" class="drawing_button">
-				
-				<svg width="24" height="24"  version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 495.339 495.339" style="enable-background:new 0 0 495.339 495.339;" xml:space="preserve">
-<path d="M196.299,405.261l277.148-277.124c6.738-6.742,6.738-17.668,0-24.408L374.805,5.056C371.563,1.824,367.176,0,362.598,0
-	c-4.584,0-8.951,1.824-12.193,5.056L73.256,282.211c-1.871,1.863-3.271,4.121-4.129,6.62L17.76,438.832
-	c-2.129,6.233-0.498,13.136,4.145,17.789c3.258,3.273,7.649,5.023,12.129,5.04c0.549,1.041,1.369,2.016,2.58,2.856
-	c8.873,6.191,18.16,10.989,27.627,15.192c44.113,19.555,93.689,18.91,141.607,8.209c36.273-8.121,70.656-22.531,106.008-33.773
-	c48.125-15.313,100.545-22.667,150.541-28.538c11.065-1.306,9.227-18.468-1.84-17.169c-68.012,8-134.779,21.635-199.277,44.717
-	c-54.258,19.394-116.512,34.867-172.09,18.005c-11.867-3.588-23.416-8.716-34.514-15.538l135.025-46.232
-	C192.17,408.527,194.461,407.123,196.299,405.261z M187.508,365.255l-18.32-18.307L418.559,97.656l18.262,18.274L187.508,365.255z
-	 M362.598,41.676l18.303,18.304l-249.34,249.35l-18.307-18.314L362.598,41.676z M91.723,406.445l-19.66-19.652l22.498-65.674
-	l62.82,62.836L91.723,406.445z"/></svg>
-			</button>
-		</div>
+				<div class="navigation__buttons">
+					<button type="button" class="drawing_button">
+						<svg width="24" height="24" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+							xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 495.339 495.339"
+							style="enable-background:new 0 0 495.339 495.339;" xml:space="preserve">
+							<path d="M196.299,405.261l277.148-277.124c6.738-6.742,6.738-17.668,0-24.408L374.805,5.056C371.563,1.824,367.176,0,362.598,0
+		c-4.584,0-8.951,1.824-12.193,5.056L73.256,282.211c-1.871,1.863-3.271,4.121-4.129,6.62L17.76,438.832
+		c-2.129,6.233-0.498,13.136,4.145,17.789c3.258,3.273,7.649,5.023,12.129,5.04c0.549,1.041,1.369,2.016,2.58,2.856
+		c8.873,6.191,18.16,10.989,27.627,15.192c44.113,19.555,93.689,18.91,141.607,8.209c36.273-8.121,70.656-22.531,106.008-33.773
+		c48.125-15.313,100.545-22.667,150.541-28.538c11.065-1.306,9.227-18.468-1.84-17.169c-68.012,8-134.779,21.635-199.277,44.717
+		c-54.258,19.394-116.512,34.867-172.09,18.005c-11.867-3.588-23.416-8.716-34.514-15.538l135.025-46.232
+		C192.17,408.527,194.461,407.123,196.299,405.261z M187.508,365.255l-18.32-18.307L418.559,97.656l18.262,18.274L187.508,365.255z
+		 M362.598,41.676l18.303,18.304l-249.34,249.35l-18.307-18.314L362.598,41.676z M91.723,406.445l-19.66-19.652l22.498-65.674
+		l62.82,62.836L91.723,406.445z" />
+						</svg>
+					</button>
+				</div>
 
-		<div class="navigation__heading">
-			Выберите элемент
-		</div>
-		<div class="navigation__items">
-			<div class="secondary_buttons">
-				<input type="text" class="interval textfield" value="Text field">
-				<p color="rgba(16,24,40)" class="sc-dlnjwi emzczg" spacing="s">Хороший шрифт</p>
-				<div class="button-hz" style="display: flex; flex-direction: column; align-items: flex-start; width: 100%; min-height: 100%; padding: 20px; transition: background 0.3s ease-in-out 0s; background: rgb(255, 255, 255);"><div class="sc-hiKfDv dRsyqq"><button type="button" class="fuMAve" color="rgba(255,79,18,1)" colorhover="rgba(255,79,18,0.05)" coloractive="rgba(255,79,18,0.1)" shape="rounded" view="primary" class="sc-crzoAE bLnvlF"><span color="rgba(16,24,40)" class="sc-dlnjwi gIkqZw sc-iqAclL jibPFy">Кнопка</span></button></div></div>
-				<div class="button-hzasd" style="display: flex; flex-direction: column; align-items: flex-start; width: 100%; min-height: 100%; padding: 20px; transition: background 0.3s ease-in-out 0s; background: rgb(255, 255, 255);"><div class="sc-hiKfDv dRsyqq"><button type="button" class="fuMAve2" color="rgba(255,79,18,1)" colorhover="rgba(255,79,18,0.05)" coloractive="rgba(255,79,18,0.1)" shape="rounded" view="primary" class="sc-crzoAE2 bLnvlF"><span color="rgba(16,24,40)" class="sc-dlnjwi gIkqZw sc-iqAclL jibPFy">Кнопка</span></button></div></div>
-				<div class="button-hzfsdf" style="display: flex; flex-direction: column; align-items: flex-start; width: 100%; min-height: 100%; padding: 20px; transition: background 0.3s ease-in-out 0s; background: rgb(255, 255, 255);"><div class="sc-hiKfDv dRsyqq"><button type="button" class="fuMAve3" color="rgba(255,79,18,1)" colorhover="rgba(255,79,18,0.05)" coloractive="rgba(255,79,18,0.1)" shape="rounded" view="primary" class="sc-crzoAE3 bLnvlF"><span color="rgba(16,24,40)" class="sc-dlnjwi gIkqZw sc-iqAclL jibPFy">Кнопка</span></button></div></div>
+				<div class="navigation__heading">
+					Выберите элемент
+				</div>
+				<div class="navigation__items">
+					<div class="secondary_buttons">
+						<h1 class="h1">h1: Lorem ipsum dolor sit.</h1>
+						<h2 class="h2">h2: Lorem ipsum dolor sit amet consectetur.</h2>
+						<h3 class="h3">h3: Lorem ipsum dolor, sit amet consectetur adipisicing.</h3>
+						<h4 class="h4">h4: Lorem ipsum dolor, sit amet consectetur adipisicing elit.</h4>
+						<p class="p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est, quas.</p>
+
+						<button class="button">Обычная кнопка</button>
+						<button class="button button-primary">Primary button</button>
+						<button class="button button-success" button-type="success" border-type="circular">Подтвердить</button>
+						<button class="button button-error" border-type="geometric" button-type="error">Ошибка</button>
+						<button class="button button-info" button-type="info">Информация</button>
+						<button class="button button-ghost" button-style="ghost">Ghost-button</button>
+						<button button-style="outline" border-type="circular" class="button button-outline"
+							id="night-mode">Стиль-outline</button>
+					</div>
+
+				</div>
+				<div class="navigation__export">
+					<button class="export_to_png button" draggable="true">Экспорт в PNG</button>
+					<button class="export_to_html button" draggable="true">Экспорт в HTML</button>
+					<button class="export_to_rt button" draggable="true">Сохранить проект</button>
+				</div>
+
 			</div>
-				
 		</div>
-		<div class="navigation__export">
-			<button class="export_to_png button" draggable="true">Экспорт в PNG</button>
-			<button class="export_to_html button" draggable="true">Экспорт в HTML</button>
-			<button class="export_to_rt button" draggable="true">Сохранить проект</button>
+		<div class="col-12 col-md-6 col-lg-8">
+			<section>
+				<div class="container">
+					<div id="main"></div>
+					<a href="#" class="add_row">Добавить секцию</a>
+				</div>
+			</section>
 		</div>
-		
+		<div class="col-12 col-md-3 col-lg-2">
+			<div class="settings_sidebar">
+				<div class="settings_sidebar__heading">Настройки</div>
+
+				<div class="text_label_settings">
+
+				</div>
+				<div class="button_settings">
+
+				</div>
+
+
+			</div>
+		</div>
 	</div>
-	<section>
-		<div class="container">
-			<div id="main"></div>
-			<a href="#" class="add_row">Добавить секцию</a>
-		</div>
-	</section>
-
-	<div class="settings_sidebar">
-		<div class="settings_sidebar__heading">Настройки</div>
-
-		<div class="text_label_settings">
-
-		</div>
-		<div class="button_settings">
-
-		</div>
 
 
-	</div>
 	<script src="js/dom-to-image.min.js"></script>
 	<script src="js/download.js"></script>
 	<script src="js/main.js"></script>

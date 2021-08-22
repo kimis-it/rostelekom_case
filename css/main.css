@@ -1,11 +1,51 @@
 * {
-  font-family: 'Rostelecom Basis', Tahoma, Verdana, sans-serif;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.section-main {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.navigation {
+  min-height: 100vh;
+  border-right: 1px solid #eee;
+  -webkit-box-shadow: rgba(117, 117, 117, 0.363) 2px 2px 2px;
+          box-shadow: rgba(117, 117, 117, 0.363) 2px 2px 2px;
+  background: #ffffff;
+}
+
+.navigation__heading {
+  background-color: #e6e6e6;
+  padding: 15px 15px;
+  width: 100%;
+  text-align: center;
+}
+
+.navigation__export {
+  background-color: #e6e6e6;
+  padding: 15px 15px;
+  width: 100%;
+}
+
+.navigation__export button:hover {
+  background: #ffffff;
+}
+
+.navigation__items {
+  overflow-y: scroll;
+  height: 100%;
 }
 
 .empty_element {
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   border: 2px dashed #555555;
   padding: 50px 20px;
 }
@@ -36,6 +76,7 @@
   height: 32px;
   cursor: pointer;
   fill: #555555;
+  margin: 10px;
 }
 
 .templates-sample:hover {
@@ -49,11 +90,11 @@
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   font-size: 24px;
   font-weight: 800;
   color: #555555;
@@ -66,38 +107,42 @@
   color: #555;
 }
 
-.navigation {
-  height: 100%;
-  width: 300px;
-  border-right: 1px solid #eee;
-  position: fixed;
-  box-shadow: rgba(117, 117, 117, 0.363) 2px 2px 2px;
-  /* display: flex; */
-  /* flex-direction: column; */
-  /* position: relative; */
+.row {
+  position: relative;
 }
 
-.navigation__heading {
-    background-color: #e6e6e6;
-    padding: 15px 15px;
-    width: 100%;
-    text-align: center;
+.row-settings {
+  position: absolute;
+  right: -2px;
+  top: -2px;
+  width: 40px;
+  background: #e9e9e9;
+  border: 2px solid #555555;
 }
 
-.navigation__export {
-    position: absolute;
-    bottom: 0px;
-    background-color: #e6e6e6;
-    padding: 15px 15px;
-    width: 100%;
-    
+.row-settings ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
-.navigation__items {
-  overflow-y: scroll;
-  height: 100%;
+.row-settings ul li {
+  width: 100%;
+  padding: 5px;
+  text-align: center;
+  cursor: pointer;
 }
 
-.container {
-  margin-left: 380px;
+.row-settings ul li:hover {
+  background: #555555;
 }

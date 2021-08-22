@@ -123,9 +123,7 @@ textarea.textfield {
 
 .settings_sidebar {
         height: 100%;
-        width: 300px;
         border-left: 1px solid #eee;
-        position: fixed;
         box-shadow: rgba(117, 117, 117, 0.363) 2px 2px 2px;
         right: 0px;
         top: 0px;
@@ -133,8 +131,6 @@ textarea.textfield {
 }
 
 .settings_sidebar__heading {
-    position: absolute;
-    top: 0px;
     background-color: #e6e6e6;
     padding: 15px 15px;
     width: 100%;

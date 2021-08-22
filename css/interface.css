@@ -1,0 +1,217 @@
+*{
+  font-family: 'RostelecomBasis';
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  margin-top: var(--spacingTop);
+  margin-bottom: var(--spaсingBottom);
+}
+[data-scheme="default"]{
+  --main-color: rgb(119, 0, 255);
+  --secondary-color:rgb(255, 79, 18);
+  --bg-block-color:rgb(244, 244, 245);
+  --placeholder-color: rgb(16, 24, 40);
+  --text-color: #000;
+  --bg-body-color:#fff;
+  --bg-input-color: rgba(16, 24, 40, 0.05);
+  --input-text-color: #000;
+  --button-text-color: #fff;
+  --border: none;
+}
+[data-scheme="night"]{
+  --main-color: rgba(148, 102, 255, 1);
+  --bg-block-color:rgb(29, 37, 51);
+  --placeholder-color: rgba(255, 255, 255, 0.9);
+  --bg-body-color:rgb(39, 47, 61);
+  --bg-input-color: rgba(255, 255, 255, 0.06);
+  --input-text-color: rgba(148, 102, 255, 1);
+  --text-color: #fff;
+  --button-text-color: #fff;
+}
+[data-scheme="vtb"]{
+  --main-color: rgb(35, 85, 246);
+  --bg-block-color:#fff;
+  --placeholder-color: rgba(18, 39, 144, 0.7);
+  --bg-body-color:rgb(244, 247, 250);
+  --bg-input-color: rgba(18, 39, 144, 0.05);
+  --input-text-color: color: rgb(18, 39, 144);
+  --text-color: rgb(18, 39, 144);
+  --button-text-color: #fff;
+}
+[border-type="rounded"]{
+  --border-radius: 8px;
+}
+[border-type="circular"]{
+  --border-radius: 32px;
+}
+[border-type="geometric"]{
+  --border-radius: 0px;
+}
+
+[button-type="success"]{
+  --main-color: rgba(38, 218, 114, 1);
+}	
+[button-type="warning"]{
+  --main-color: rgba(255, 202, 0, 1);
+}
+[button-type="error"]{
+  --main-color: rgba(255, 71, 71, 1);
+}	
+[button-type="info"]{
+  --main-color: rgba(64, 117, 255, 1);
+}
+[button-style="outline"]{
+--border: 2px solid;
+--border-color: rgb(119, 0, 255);
+--main-color: transparent;
+}
+[button-style="ghost"]{
+  --border: none;
+  --main-color: transparent;
+  --button-text-color: rgb(119, 0, 255);
+  }
+
+[text-type="mega-text"]{
+  --font-size: 42px
+}
+[text-type="caption"]{
+  --font-size: 12px
+}
+[text-type="description"]{
+  --font-size: 11px
+}
+
+[spaсing="s"]{
+  --spaсing: 12px ;
+}
+[spaсing="m"]{
+  --spaсing:  16px 36px;
+}
+[spaсing="l"]{
+  --spaсing:  32px 60px;
+}
+[spaсing="xl"]{
+  --spaсing:  64px 100px;
+}
+
+[spaсingTop ="s"]{
+  --spacingTop: 8px;
+}
+[spaсingTop ="m"]{
+  --spacingTop: 12px;
+}
+[spaсingTop ="l"]{
+  --spacingTop: 20px;
+}
+[spaсingTop ="xl"]{
+  --spacingTop: 32px;
+}
+
+[spaсingBottom ="s"]{
+  --spacingTop: 8px;
+}
+[spaсingBottom ="m"]{
+  --spacingTop: 12px;
+}
+[spaсingBottom ="l"]{
+  --spacingTop: 20px;
+}
+[spaсingBottom ="xl"]{
+  --spacingTop: 32px;
+}
+
+
+
+:root{
+--border-radius: 8px;
+--border: none;
+--spaсing: 16px 36px;
+
+--font-size-mega: 42px;
+
+--font-size-h1: 28px;
+--font-size-h2: 22px;
+--font-size-h3: 16px;
+--font-size-h4: 14px;
+
+--font-size-body-L: 16px;
+--font-size-body-M: 14px;
+
+--font-size-caption: 12px;
+--font-size-description: 11px;
+
+--font-size-accent-S: 14px;
+--font-size-accent-M: 16px;
+--font-size-accent-L: 24px;
+
+--font-size: 16px;
+--gap-s-1280: 16px;
+--spaсingTop: 8px;
+--spaсingBottom: 8px;
+}
+
+.block{
+  background: var(--bg-block-color);
+  font-size: var(--font-size);
+  margin: var(--gap-s-1280);
+  padding: var(--spaсing);
+  border: var(--border);
+  color: var(--text-color);
+}
+body{
+  background: var(--bg-body-color);
+}
+.button{
+  color: var(--button-text-color);
+  background-color: var(--main-color);
+  font-size: var(--font-size);
+  padding: var(--spaсing);
+  border-radius: var(--border-radius);
+  border: var(--border);
+  margin: 10px;
+  cursor: pointer;
+}
+.button-outline{
+  border-color: var(--border-color);
+  color: var(--text-color);
+  
+}
+.button-outline:hover{
+  color: var(--border-color);
+
+}
+h1{
+  font-size: var(--font-size-h1);
+}
+h2{
+  font-size: var(--font-size-h2);
+}
+h3{
+  font-size: var(--font-size-h3);
+}
+h4{
+  font-size: var(--font-size-h4);
+}
+p,span,div,label{
+  font-size: var(--font-size);
+}
+input, select, textarea{
+  font-size: var(--font-size);
+  border: var(--border);
+  border-radius: var(--border-radius);
+  color: var(--input-text-color);
+  background: var(--bg-input-color);
+  
+  padding: var(--spaсing);
+  margin: 10px;
+
+}
+.input-text, textarea{
+  width: 100%;
+}
+input::placeholder, select::placeholder, textarea::placeholder{
+  color: var(--placeholder-color);
+}
+.radio, .check-box{
+
+}
