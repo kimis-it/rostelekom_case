@@ -1,43 +1,60 @@
 window.onload = () => {
-    let button1 = document.querySelector(".start"),
-        button2 = document.querySelector(".update_categories"),
-        button3 = document.querySelector(".reset"),
-        textField = document.querySelector(".textfield"),
-
-        exportToPngButton = document.querySelector(".export_to_png"),
+    let exportToPngButton = document.querySelector(".export_to_png"),
         exportToHtmlButton = document.querySelector(".export_to_html"),
         exportToRtButton = document.querySelector(".export_to_rt"),
 
+        sidebar = document.querySelector(".secondary_buttons"),
+
         mainScreen = document.querySelector("#main");
 
+    let isCurrentElementFromSidebar = false
+        currentElementId = 0;
+
     let copyElementToDataTransfer = (e) => {
-        e.dataTransfer.setData("text/plain", e.target.className);
+        e.dataTransfer.setData("text/plain", e.target.className); // В dataTransfer записываем ссылку на элемент
+
         e.dataTransfer.dropEffect = "copy";
+
+        if(e.currentTarget.parentNode.className == "secondary_buttons") { // Если елемент из сайдбара, то включаем триггер
+            isCurrentElementFromSidebar = true;
+        } else {
+            isCurrentElementFromSidebar = false;
+        }
     }
 
-    button1.addEventListener("dragstart", (e) => {
-        copyElementToDataTransfer(e);
-    });
-
-    button2.addEventListener("dragstart", (e) => {
-        copyElementToDataTransfer(e);
-    });
-
-    button3.addEventListener("dragstart", (e) => {
-        copyElementToDataTransfer(e);
-    });
-
-    textField.addEventListener("dragstart", (e) => {
-        copyElementToDataTransfer(e);
-    });
-
-    mainScreen.addEventListener("drop", (e) => {
-        e.preventDefault();
-        // Получить className цели и добавить перемещённый элемент в его DOM
+    let pasteElementFromDataTransfer = (e) => {
         const data = e.dataTransfer.getData("text/plain");
-        e.target.appendChild(document.getElementsByClassName(data)[0].cloneNode(true));
-        
+
+        if(isCurrentElementFromSidebar) {
+            let currentElement = document.getElementsByClassName(data)[0];
+            let newElement = currentElement.cloneNode(true);    // Копируем элемент
+            newElement.classList.add("custom-" + currentElementId); // Присваеваем ему уникальный класс
+            newElement.addEventListener("dragstart", (e) => {       // Вешаем на него событие
+                copyElementToDataTransfer(e);
+            });
+            isCurrentElementFromSidebar = false;
+            e.target.appendChild(newElement);
+            currentElementId++;
+        } else {
+            console.log(data);
+            console.log(document.getElementsByClassName(data)[0]);
+            e.target.appendChild(document.getElementsByClassName(data)[0]);
+        }
+    }
+
+    console.log(sidebar.children);
+
+    Array.from(sidebar.children).map((item) => { 
+        item.setAttribute("draggable", "true");
+        item.addEventListener("dragstart", (e) => { // Обработчик события по началу перетаскивания, вешается на каждый элемент
+            copyElementToDataTransfer(e);
+        });
     });
+
+    mainScreen.addEventListener("drop", (e) => { // Обработчик события по окончанию перетаскивания, вешается на места приземления
+        pasteElementFromDataTransfer(e);
+    });
+   
 
     mainScreen.addEventListener("dragover", (e) => {
         e.preventDefault();
@@ -50,11 +67,11 @@ window.onload = () => {
         let rows = document.querySelectorAll("row"),
             items = document.querySelectorAll(".newItem");
         
-        Array.from(rows).map((item) => {
+        Array.from(rows).map((item) => {    // Перед фотографированием скрываем рамки у рядов
             item.classList.add("noborder");
         });
 
-        Array.from(items).map((item) => {
+        Array.from(items).map((item) => {   // Перед фотографированием скрываем рамки у элементов 
             item.classList.add("noborder");
         });
 
@@ -62,11 +79,11 @@ window.onload = () => {
             .then(function (blob) {
                 download(blob, "rt_view.png", "image/png");
 
-                Array.from(rows).map((item) => {
+                Array.from(rows).map((item) => { // Возвращаем рамки на место
                     item.classList.remove("noborder");
                 });
         
-                Array.from(items).map((item) => {
+                Array.from(items).map((item) => { // Возвращаем рамки на место
                     item.classList.remove("noborder");
                 });
             })
@@ -82,7 +99,7 @@ window.onload = () => {
         download(data, "rt_view.html", "text/plain");
     });
 
-    exportToRtButton.addEventListener("click", (e) => { // Экспорт во внутренний формат
+    exportToRtButton.addEventListener("click", (e) => { // Экспорт во внутренний формат Russian Nano JSON
         let data = Array.prototype.slice.call(mainScreen.childNodes);
         download(data, "rt_view.json", "text/plain");
     });

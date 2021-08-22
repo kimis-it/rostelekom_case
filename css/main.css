@@ -1,3 +1,6 @@
+* {
+  font-family: 'Rostelecom Basis', Tahoma, Verdana, sans-serif;
+}
 
 .empty_element {
   -webkit-box-pack: center;
@@ -74,6 +77,13 @@
   /* position: relative; */
 }
 
+.navigation__heading {
+    background-color: #e6e6e6;
+    padding: 15px 15px;
+    width: 100%;
+    text-align: center;
+}
+
 .navigation__export {
     position: absolute;
     bottom: 0px;
@@ -89,5 +99,5 @@
 }
 
 .container {
-  margin-left: 320px;
+  margin-left: 380px;
 }

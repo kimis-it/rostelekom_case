@@ -28,7 +28,6 @@
 
 }
 
-
 .start {   
     padding: 12px 0;
     font-size: 20px;
@@ -64,11 +63,12 @@
 
 .textfield {
     padding: 10px;
-    color: #666; 
-    font-size: 20px; 
-    border-radius: 7px; 
-    border: 1px solid #b1b1b1;   
-    margin-top: 0px;
+    color: #666;
+    font-size: 20px;
+    border-radius: 7px;
+    border: 1px solid #b1b1b1;
+    margin-top: 18px;
+    margin-bottom: 10px;
     background-color: #f9f9f9;
 }
 
@@ -78,32 +78,91 @@ textarea.textfield {
 }
 
 
-
-.center_column {
-    flex: 4 1 300px;
-    background-color: rgba(255, 255, 255, 0.5);
-    border-radius: 10px;
-    margin:30px 15px 30px 30px;
-    padding:20px;
-    /* width: 60%;*/
-    /* overflow-y: scroll; */
-    display: grid;
-    grid-template-columns: minmax(150px, 200px) minmax(150px, 200px) minmax(150px, 200px) minmax(150px, 200px) minmax(150px, 200px) minmax(150px, 200px);
-    grid-column-gap: 12px;
-    grid-row-gap: 12px;
-}
-
-.col {
-    
-}
-
-.cell {
-    border: 1px dotted rgb(56, 56, 56);
-    content: "&nbsp;";
-    /* width: 30px; */
-    padding: 25px 36px 25px 36px;
-}
-
 .noborder {
     border: 0px dotted #fff !important;
+}
+
+
+
+/* --------------------------------------------------------------------------------------------- */
+
+.fuMAve, .fuMAve2, .fuMAve3 {
+    text-decoration: none;
+    border: 2px solid transparent;
+    box-sizing: border-box;
+    outline: none;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    cursor: pointer;
+    max-width: 100%;
+    white-space: nowrap;
+    min-width: 140px;
+    height: 56px;
+    padding: 0px 40px;
+    background-color: rgb(119, 0, 255);
+    border-radius: 8px;
+}
+
+.emzczg {
+    text-align: center;
+}
+
+.fuMAve2 {
+    background-color: rgb(255, 153, 0);
+}
+
+.fuMAve3 {
+    background-color: rgb(255, 0, 0);
+}
+
+
+/* Right sidebar settings  */
+
+.settings_sidebar {
+        height: 100%;
+        width: 300px;
+        border-left: 1px solid #eee;
+        position: fixed;
+        box-shadow: rgba(117, 117, 117, 0.363) 2px 2px 2px;
+        right: 0px;
+        top: 0px;
+        background: #fff;
+}
+
+.settings_sidebar__heading {
+    position: absolute;
+    top: 0px;
+    background-color: #e6e6e6;
+    padding: 15px 15px;
+    width: 100%;
+    text-align: center;
+}
+
+.drawing_button {
+    background-color: rgba(255,79,18,1);
+    border: 0px;
+    color: #fff;
+    width: 48px;
+    height: 48px;
+    border-radius: 5px;
+    margin: 5px 0px 5px 10px;
+}
+
+#Capa_1 {
+    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(17deg) brightness(104%) contrast(104%);
+}
+
+.drawing_button:hover {
+    background-color: rgb(240, 73, 17);
+}
+
+.text_label_settings {
+    display: none;
+}
+
+.button_settings {
+    display: none;
 }

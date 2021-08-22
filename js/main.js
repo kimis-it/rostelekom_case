@@ -64,6 +64,7 @@ function addRow() {
         }
       });
     });
+    
 }
 
 function createCol(element, count = 1) {
@@ -72,7 +73,7 @@ function createCol(element, count = 1) {
     col.className = "col";
     var newItem = document.createElement("div");
     newItem.className = 'newItem';
-    newItem.innerHTML = '+';
+    newItem.innerHTML = '';
     col.append(newItem);
 
     element.append(col);
