@@ -1,51 +1,26 @@
 @font-face {
 	font-family: "Rostelecom Basis";
-<<<<<<< HEAD
-	src: url(fonts/RostelecomBasis-Regular.3e8f201e.eot);
 	src: url(fonts/RostelecomBasis-Regular.3e8f201e.eot?#iefix) format("embedded-opentype"), url(fonts/RostelecomBasis-Regular.3e35cb43.woff) format("woff"), url(fonts/RostelecomBasis-Regular.907e3161.ttf) format("truetype"), url(fonts/RostelecomBasis-Regular.3a045133.svg#RostelecomBasis-Regular) format("svg");
-=======
-	src: url(/static/media/RostelecomBasis-Regular.3e8f201e.eot);
-	src: url(/static/media/RostelecomBasis-Regular.3e8f201e.eot?#iefix) format("embedded-opentype"), url(/static/media/RostelecomBasis-Regular.3e35cb43.woff) format("woff"), url(/static/media/RostelecomBasis-Regular.907e3161.ttf) format("truetype"), url(/static/media/RostelecomBasis-Regular.3a045133.svg#RostelecomBasis-Regular) format("svg");
->>>>>>> 1087f5347c7eb33777442813b34bff39d7b87bb8
 	font-style: normal;
-	font-weight: 400
-}
-
-@font-face {
 	font-family: "Rostelecom Basis";
-<<<<<<< HEAD
 	src: url(fonts/RostelecomBasis-Medium.68584d56.eot);
 	src: url(fonts/RostelecomBasis-Medium.68584d56.eot?#iefix) format("embedded-opentype"), url(fonts/RostelecomBasis-Medium.1557d784.woff) format("woff"), url(fonts/RostelecomBasis-Medium.0a313be4.ttf) format("truetype"), url(fonts/RostelecomBasis-Medium.08da803e.svg#RostelecomBasis-Medium) format("svg");
-=======
-	src: url(/static/media/RostelecomBasis-Medium.68584d56.eot);
-	src: url(/static/media/RostelecomBasis-Medium.68584d56.eot?#iefix) format("embedded-opentype"), url(/static/media/RostelecomBasis-Medium.1557d784.woff) format("woff"), url(/static/media/RostelecomBasis-Medium.0a313be4.ttf) format("truetype"), url(/static/media/RostelecomBasis-Medium.08da803e.svg#RostelecomBasis-Medium) format("svg");
->>>>>>> 1087f5347c7eb33777442813b34bff39d7b87bb8
 	font-style: normal;
 	font-weight: 500
 }
 
 @font-face {
 	font-family: "Rostelecom Basis";
-<<<<<<< HEAD
 	src: url(fonts/RostelecomBasis-Light.1752ed54.eot);
 	src: url(fonts/RostelecomBasis-Light.1752ed54.eot?#iefix) format("embedded-opentype"), url(fonts/RostelecomBasis-Light.06180679.woff) format("woff"), url(fonts/RostelecomBasis-Light.8bb92a66.ttf) format("truetype"), url(fonts/RostelecomBasis-Light.b2ad099b.svg#RostelecomBasis-Light) format("svg");
-=======
-	src: url(/static/media/RostelecomBasis-Light.1752ed54.eot);
-	src: url(/static/media/RostelecomBasis-Light.1752ed54.eot?#iefix) format("embedded-opentype"), url(/static/media/RostelecomBasis-Light.06180679.woff) format("woff"), url(/static/media/RostelecomBasis-Light.8bb92a66.ttf) format("truetype"), url(/static/media/RostelecomBasis-Light.b2ad099b.svg#RostelecomBasis-Light) format("svg");
->>>>>>> 1087f5347c7eb33777442813b34bff39d7b87bb8
 	font-style: normal;
 	font-weight: 300
 }
 
 @font-face {
 	font-family: "Rostelecom Basis";
-<<<<<<< HEAD
 	src: url(fonts/RostelecomBasis-Bold.ee12a843.eot);
 	src: url(fonts/RostelecomBasis-Bold.ee12a843.eot?#iefix) format("embedded-opentype"), url(fonts/RostelecomBasis-Bold.8eb18966.woff) format("woff"), url(fonts/RostelecomBasis-Bold.15301076.ttf) format("truetype"), url(fonts/RostelecomBasis-Bold.bd88dbbf.svg#RostelecomBasis-Bold) format("svg");
-=======
-	src: url(/static/media/RostelecomBasis-Bold.ee12a843.eot);
-	src: url(/static/media/RostelecomBasis-Bold.ee12a843.eot?#iefix) format("embedded-opentype"), url(/static/media/RostelecomBasis-Bold.8eb18966.woff) format("woff"), url(/static/media/RostelecomBasis-Bold.15301076.ttf) format("truetype"), url(/static/media/RostelecomBasis-Bold.bd88dbbf.svg#RostelecomBasis-Bold) format("svg");
->>>>>>> 1087f5347c7eb33777442813b34bff39d7b87bb8
 	font-style: normal;
 	font-weight: 700
 }

@@ -206,9 +206,9 @@ input, select, textarea{
   margin: 10px;
 
 }
-.input-text, textarea{
+/* .input-text, textarea{
   width: 100%;
-}
+} */
 input::placeholder, select::placeholder, textarea::placeholder{
   color: var(--placeholder-color);
 }
