@@ -176,4 +176,8 @@ function searchForAdjacentElement(elm, next){
 
 addRowButton.addEventListener("click", addRow);
 
+function cheangeOrintation(currentElement){
+	currentElement.classList.toggle('orintation_column');
+}
+
 addRow();
