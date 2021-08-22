@@ -14,7 +14,7 @@
 	<link rel="stylesheet" href="css/interface.css">
 </head>
 
-<body data-scheme="default">
+<body>
 	<div class="row">
 		<div class="col-12 col-md-3 col-lg-2">
 			<div class="navigation">
@@ -86,7 +86,19 @@
 
 				</div>
 				<div class="button_settings">
-
+					<select id="style-switch" name="style-switch" id="" onchange="styleSwitch()">
+						<option class="style-option" value="default">Ростелеком</option>
+						<option class="style-option" value="night">Тёмная тема</option>
+						<option class="style-option" value="vtb">ВТБ</option>
+					</select>
+					<script>
+						let body = document.querySelector('body');
+						let select = document.querySelector('#style-switch');
+						function styleSwitch() {
+							let selectedStyle = select.options[select.selectedIndex].value;
+							body.setAttribute('data-scheme', selectedStyle);
+						}
+					</script>
 				</div>
 
 
